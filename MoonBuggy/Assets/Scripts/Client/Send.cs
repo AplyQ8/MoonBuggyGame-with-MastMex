@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
@@ -30,6 +31,27 @@ public class Send : MonoBehaviour
     public void Lobby_List()
     {
         string message = @"/list_lobby\r\n\r\n";
+        byte[] requestData = Encoding.UTF8.GetBytes(message);
+        socket.Send(requestData);
+    }
+
+    public void Leave_Lobby(int? id)
+    {
+        string message = @$"/leave_lobby {id}\r\n\r\n";
+        byte[] requestData = Encoding.UTF8.GetBytes(message);
+        socket.Send(requestData);
+    }
+
+    public void Send_Ready()
+    {
+        string message = @"/ready_to_play\r\n\r\n";
+        byte[] requestData = Encoding.UTF8.GetBytes(message);
+        socket.Send(requestData);
+    }
+
+    public void Send_Jump(Int32 unixTime)
+    {
+        string message = @$"/jump {unixTime}\r\n\r\n";
         byte[] requestData = Encoding.UTF8.GetBytes(message);
         socket.Send(requestData);
     }

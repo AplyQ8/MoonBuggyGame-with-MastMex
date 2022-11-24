@@ -28,6 +28,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void Send_Request_Join_Lobby(int id)
     {
+        client.currentLobbyID = id;
         client.Join_Lobby(id);
     }
 
