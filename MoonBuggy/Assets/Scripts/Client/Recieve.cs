@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using UnityEngine;
 
 public class Recieve : MonoBehaviour
@@ -10,6 +11,7 @@ public class Recieve : MonoBehaviour
     private Socket socket;
     [SerializeField] private Client client;
     [SerializeField] private static Threadmanager _threadManager;
+    private static Thread testThread = null;
 
     private void Awake()
     {
@@ -18,7 +20,8 @@ public class Recieve : MonoBehaviour
 
     public void StartListening()
     {
-        
+        testThread = new Thread(new ThreadStart(ThreadAction));
+        testThread.Start();
     }
     public void SetSocket(Socket _socket)
     {
@@ -32,19 +35,54 @@ public class Recieve : MonoBehaviour
             byte[] bytes = new byte[1024];
             int bytesRec = socket.Receive(bytes);
             String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
-            String[] commands = res.Split(@"\r\n\r\n");
+            String[] commands = res.Split("\r\n\r\n");
             for (int i = 0; i < commands.Length - 1; i++)
             {
-                String[] param = commands[i].Split("_");
-                SwitchFunc(param);
+                String[] param = commands[i].Split(" ");
+                switch ((Status)Enum.Parse(typeof(Status), param[0]))
+                {
+                    case Status.OK:
+                        SwitchFunc(param);
+                        break;
+                    case Status.ERROR:
+                        Debug.Log(commands[0]);
+                        break;
+                }
+               
             }
         }
     }
-
+    enum Status
+    {
+        OK,
+        ERROR,
+        DEATH
+    }
     private void SwitchFunc(string[] arguments)
     {
-        switch (arguments[0])
+        switch (arguments[1])
         {
+            case "/create_lobby":
+                _threadManager.ExecuteOnMainThread(() => { Recieve_Lobby(Convert.ToInt32(arguments[2])); });
+                break;
+            case "/list_lobby":
+                _threadManager.ExecuteOnMainThread(() => { Recieve_Lobby_List(arguments); });
+                break;
+            case "/join_lobby":
+                _threadManager.ExecuteOnMainThread(() => { Recieve_Request_For_Joining(); });
+                break;
+            case "/leave_lobby":
+                _threadManager.ExecuteOnMainThread(() => { Recieve_Lobby_Leaving(); });
+                break;
+            case "/list_players":
+                _threadManager.ExecuteOnMainThread(() => { Receive_Player_List(arguments); });
+                break;
+            case "/ready_to_play":
+                _threadManager.ExecuteOnMainThread(() => { Receive_Response_For_Readiness(); });
+                break;
+            case "/get_player_id":
+                _threadManager.ExecuteOnMainThread(()=> { Receive_Player_ID(arguments[2]);});
+                break;
             case "/start_game":
                 _threadManager.ExecuteOnMainThread(() => { StartGame(); });
                 break;
@@ -53,103 +91,37 @@ public class Recieve : MonoBehaviour
         }
     }
     
-    enum Status
-    {
-        OK,
-        ERROR,
-        DEATH
-    }
+    
     
 
-    public void Recieve_Lobby()
+    private void Recieve_Lobby(int id)
     {
-        byte[] bytes = new byte[1024];
-        int bytesRec = socket.Receive(bytes);
-        String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
-        String[] commands = res.Split(@"\r\n\r\n");
-        String[] param = commands[0].Split(" ");
-        switch ((Status)Enum.Parse(typeof(Status), param[0]))
-        {
-            case Status.OK:
-                client.Lobby_Creation(Convert.ToInt32(param[1]));
-                break;
-            case Status.ERROR:
-                Debug.Log($"{param[0]} {param[1]}");
-                break;
-        }
+        client.Lobby_Creation(id);
     }
 
-    public void Recieve_Request_For_Joining()
+    private void Recieve_Request_For_Joining()
     {
-        byte[] bytes = new byte[1024];
-        int bytesRec = socket.Receive(bytes);
-        String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
-        String[] commands = res.Split(@"\r\n\r\n");
-        String[] param = commands[0].Split(" ");
-        switch ((Status)Enum.Parse(typeof(Status), param[0]))
-        {
-            case Status.OK:
-                client.Joining_Lobby();
-                break;
-            case Status.ERROR:
-                client.currentLobbyID = null;
-                Debug.Log($"{param[0]} {param[1]}");
-                break;
-        }
+        client.Joining_Lobby();
     }
 
-    public void Recieve_Lobby_List()
+    private void Recieve_Lobby_List(string[] param)
     {
-        byte[] bytes = new byte[1024];
-        int bytesRec = socket.Receive(bytes);
-        String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
-        String[] commands = res.Split(@"\r\n\r\n");
-        String[] param = commands[0].Split(" ");
-        switch ((Status)Enum.Parse(typeof(Status), param[0]))
-        {
-            case Status.OK:
-                client.Make_Lobby_List(param.Length, param);
-                break;
-            case Status.ERROR:
-                Debug.Log($"{param[0]}: can not get a list of lobby...");
-                break;
-        }
+        client.Make_Lobby_List(param.Length, param);
     }
 
-    public void Recieve_Lobby_Leaving()
+    private void Recieve_Lobby_Leaving()
     {
-        byte[] bytes = new byte[1024];
-        int bytesRec = socket.Receive(bytes);
-        String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
-        String[] commands = res.Split(@"\r\n\r\n");
-        String[] param = commands[0].Split(" ");
-        switch ((Status)Enum.Parse(typeof(Status), param[0]))
-        {
-            case Status.OK:
-                client.Accept_Leave_Lobby();
-                break;
-            case Status.ERROR:
-                Debug.Log($"{param[0]}: {param[1]}");
-                break;
-        }
+        client.Accept_Leave_Lobby();
     }
 
-    public void Receive_Response_For_Readiness()
+    private void Receive_Response_For_Readiness()
     {
-        byte[] bytes = new byte[1024];
-        int bytesRec = socket.Receive(bytes);
-        String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
-        String[] commands = res.Split(@"\r\n\r\n");
-        String[] param = commands[0].Split(" ");
-        switch ((Status)Enum.Parse(typeof(Status), param[0]))
-        {
-            case Status.OK:
-                client.Accept_Readiness();
-                break;
-            case Status.ERROR:
-                Debug.Log($"{param[0]}: {param[1]}");
-                break;
-        }
+        client.Accept_Readiness();
+    }
+
+    private void Receive_Player_List(string[] param)
+    {
+        client.Accept_Players(param);
     }
 
     public void Accept_Jump()
@@ -157,7 +129,7 @@ public class Recieve : MonoBehaviour
         byte[] bytes = new byte[1024];
         int bytesRec = socket.Receive(bytes);
         String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
-        String[] commands = res.Split(@"\r\n\r\n");
+        String[] commands = res.Split("\r\n\r\n");
         String[] param = commands[0].Split(" ");
         switch ((Status)Enum.Parse(typeof(Status), param[0]))
         {
@@ -168,6 +140,11 @@ public class Recieve : MonoBehaviour
                 client.LostTheGame();
                 break;
         }
+    }
+
+    private void Receive_Player_ID(string id)
+    {
+        client.SetID(id);
     }
 
     private void StartGame()

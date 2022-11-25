@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b2a3629562780948a0a45c6675d80a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  client: {fileID: 0}
+  client: {fileID: 863470441}
 --- !u!114 &863470439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -862,6 +862,7 @@ MonoBehaviour:
   reciever: {fileID: 863470438}
   sender: {fileID: 863470439}
   gameManager: {fileID: 0}
+  actionManager: {fileID: 0}
 --- !u!1 &991156218
 GameObject:
   m_ObjectHideFlags: 0

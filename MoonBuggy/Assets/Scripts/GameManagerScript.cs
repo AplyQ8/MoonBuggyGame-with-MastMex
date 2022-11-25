@@ -55,13 +55,14 @@ public class GameManagerScript : MonoBehaviour
 
     public void Make_Lobby_List(int length, string[] ids)
     {
-        foreach (var child in content.GetComponentsInChildren<Transform>())
+        // foreach (var child in content.GetComponentsInChildren<Transform>())
+        // {
+        //     Destroy(child.gameObject);
+        // }
+        for (int i = 2; i < length; i++)
         {
-            Destroy(child.gameObject);
-        }
-        for (int i = 1; i < length; i++)
-        {
-            Get_Request_Create_Lobby(Convert.ToInt32(ids[i]));
+            if(ids[i] != "")
+                Get_Request_Create_Lobby(Convert.ToInt32(ids[i]));
         }
     }
     //----------------------------------------------

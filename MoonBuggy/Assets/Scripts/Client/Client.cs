@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using System.Text;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,7 @@ public class Client : MonoBehaviour
     [SerializeField] private GameObject actionManager;
     private Socket socket;
     public int? currentLobbyID;
+    private string _id;
     
     private void Awake()
     {
@@ -24,9 +26,13 @@ public class Client : MonoBehaviour
         socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         try
         {
-            socket.Connect("26.149.21.51", 1457);
+            socket.Connect("45.9.72.97", 5542);
+            Debug.Log("Connected to server\n");
+            //Debug.Flush();
             reciever.SetSocket(socket);
+            StartListening();
             sender.SetSocket(socket);
+            RequestPlayerID();
         }
         catch (SocketException ex)
         {
@@ -44,7 +50,7 @@ public class Client : MonoBehaviour
         actionManager = manager;
     }
 
-    public void StartListening()
+    private void StartListening()
     {
         reciever.StartListening();
     }
@@ -53,37 +59,42 @@ public class Client : MonoBehaviour
     public void Create_Lobby()
     {
         sender.Create_Lobby();
-        reciever.Recieve_Lobby();
     }
 
     public void Join_Lobby(int id)
     {
         sender.Join_Lobby(id);
-        reciever.Recieve_Request_For_Joining();
     }
 
     public void Get_Lobby_List()
     {
         sender.Lobby_List();
-        reciever.Recieve_Lobby_List();
     }
 
     public void Leave_Lobby(int? id)
     {
         sender.Leave_Lobby(id);
-        reciever.Recieve_Lobby_Leaving();
     }
 
     public void Send_Ready()
     {
         sender.Send_Ready();
-        reciever.Receive_Response_For_Readiness();
     }
 
     public void Send_Jump(Int32 unixTime)
     {
         sender.Send_Jump(unixTime);
         reciever.Accept_Jump();
+    }
+
+    public void Request_For_Player_List(int? id)
+    {
+        sender.Request_For_Players_List(id);
+    }
+
+    private void RequestPlayerID()
+    {
+        sender.Request_Player_ID();
     }
     //----------------------------------------------
     
@@ -119,6 +130,11 @@ public class Client : MonoBehaviour
         actionManager.GetComponent<ActionManager>().StartGame();
     }
 
+    public void Accept_Players(string[] param)
+    {
+        actionManager.GetComponent<ActionManager>().Accept_player_List(param, _id);
+    }
+
     public void Accept_Jump()
     {
         
@@ -127,6 +143,11 @@ public class Client : MonoBehaviour
     public void LostTheGame()
     {
         actionManager.GetComponent<ActionManager>().LostTheGame();
+    }
+
+    public void SetID(string id)
+    {
+        _id = id;
     }
     //----------------------------------------------
 }

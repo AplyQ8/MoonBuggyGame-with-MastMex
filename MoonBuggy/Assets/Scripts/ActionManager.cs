@@ -16,6 +16,8 @@ public class ActionManager : MonoBehaviour
     [SerializeField] private TMP_Text waitingForOthers;
     [SerializeField] private GameObject player;
     [SerializeField] private TMP_Text lostMessage;
+    [SerializeField] private GameObject enemyField;
+    [SerializeField] private GameObject enemyPref;
     [SerializeField] private int? lobbyID;
     
     
@@ -23,9 +25,9 @@ public class ActionManager : MonoBehaviour
     {
         tcpClient = GameObject.Find("Client");
         client = tcpClient.GetComponent<Client>();
-        client.SetActionManager(gameObject);
         lobbyID = client.currentLobbyID;
-        client.StartListening();
+        client.SetActionManager(gameObject);
+        List_Players();
         lostMessage.enabled = false;
     }
 //-------------Send Requests-------------------------
@@ -42,6 +44,11 @@ public class ActionManager : MonoBehaviour
     public void Send_Jump(Int32 unixTime)
     {
         client.Send_Jump(unixTime);
+    }
+
+    private void List_Players()
+    {
+        client.Request_For_Player_List(lobbyID);
     }
 //---------------------------------------------------
 
@@ -68,6 +75,20 @@ public class ActionManager : MonoBehaviour
     {
         player.GetComponent<BuggyScript>().enabled = false;
         lostMessage.enabled = true;
+    }
+
+    public void Accept_player_List(string[] param, string playerID)
+    {
+        for (int i = 3; i < param.Length - 1; i++)
+        {
+            if (param[i] != playerID)
+            {
+                GameObject enemy = Instantiate(enemyPref, new Vector3(0, 0, 0), Quaternion.identity);
+                enemy.transform.SetParent(enemyField.transform);
+                enemy.transform.localScale = new Vector3(1, 1, 1);
+                enemy.GetComponent<EnemyScript>().SetID(param[i]);
+            }
+        }
     }
 //---------------------------------------------------    
 }

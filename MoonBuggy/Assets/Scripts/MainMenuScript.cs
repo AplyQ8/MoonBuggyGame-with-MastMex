@@ -14,6 +14,7 @@ public class MainMenuScript : MonoBehaviour
     public void Multiplayer()
     {
         client.GetComponent<Client>().CreateConn();
+        Debug.Log("Vse Ok");
         SceneManager.LoadScene(2);
     }
     public void Quit()
