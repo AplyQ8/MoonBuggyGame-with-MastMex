@@ -50,6 +50,7 @@ public class GameManagerScript : MonoBehaviour
         lobby.transform.localScale = new Vector3(1, 1, 1);
         lobby.GetComponent<LobbyPref_Script>().SetInformation(id);
         lobbyList.Add(lobby);
+        SceneManager.LoadScene(3);
     }
 
     public void Get_Request_Join_Lobby()
@@ -59,24 +60,31 @@ public class GameManagerScript : MonoBehaviour
 
     public void Make_Lobby_List(int length, string[] ids)
     {
-        foreach (var lobby in lobbyList)
+        for (int i = 0; i < lobbyList.Count; i++)
         {
-            lobbyList.Remove(lobby);
-            Destroy(lobby);
+            Destroy(lobbyList[i]);
+            lobbyList.Remove(lobbyList[i]);
         }
         for (int i = 2; i < length; i++)
         {
-            if(ids[i] != "")
-                Get_Request_Create_Lobby(Convert.ToInt32(ids[i]));
+            if (ids[i] != "")
+            {
+                GameObject lobby = Instantiate(lobbyPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+                lobby.transform.SetParent(content.transform);
+                lobby.transform.localScale = new Vector3(1, 1, 1);
+                lobby.GetComponent<LobbyPref_Script>().SetInformation(Convert.ToInt32(ids[i]));
+                lobbyList.Add(lobby);
+            }
+                //Get_Request_Create_Lobby(Convert.ToInt32(ids[i]));
         }
     }
 
     public void AddMessageToErrorLog(string message)
     {
-        Instantiate(errorMessage, new Vector3(0, 0, 0), Quaternion.identity);
-        errorMessage.text = message;
-        errorMessage.transform.SetParent(errorLog.transform);
-        errorMessage.transform.localScale = new Vector3(1, 1, 1);
+        TMP_Text errorMsg = Instantiate(errorMessage, new Vector3(0, 0, 0), Quaternion.identity);
+        errorMsg.text = message;
+        errorMsg.transform.SetParent(errorLog.transform);
+        errorMsg.transform.localScale = new Vector3(1, 1, 1);
     }
     //----------------------------------------------
 }

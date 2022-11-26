@@ -108,6 +108,7 @@ public class Client : MonoBehaviour
     public void Lobby_Creation(int id)
     {
         gameManager.GetComponent<GameManagerScript>().Get_Request_Create_Lobby(id);
+        currentLobbyID = id;
     }
 
     public void Joining_Lobby()

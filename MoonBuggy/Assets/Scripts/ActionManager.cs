@@ -99,6 +99,7 @@ public class ActionManager : MonoBehaviour
         enemy.transform.SetParent(enemyField.transform);
         enemy.transform.localScale = new Vector3(1, 1, 1);
         enemy.GetComponent<EnemyScript>().SetID(id);
+        enemies.Add(enemy);
     }
 
     public void Player_Ready_Event(string id)
@@ -112,12 +113,14 @@ public class ActionManager : MonoBehaviour
 
     public void Player_Delete_Event(string id)
     {
-        foreach (var enemy in enemies)
+        for (int i = 0; i < enemies.Count; i++)
         {
-            if (enemy.GetComponent<EnemyScript>().CheckID(id))
+            if (enemies[i].GetComponent<EnemyScript>().CheckID(id))
             {
-                enemies.Remove(enemy);
-                Destroy(enemy);
+                Destroy(enemies[i]);
+                enemies.Remove(enemies[i]);
+                break;
+
             }
         }
     }
