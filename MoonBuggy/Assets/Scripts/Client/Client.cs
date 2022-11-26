@@ -86,6 +86,10 @@ public class Client : MonoBehaviour
         sender.Send_Ready();
     }
 
+    public void ListReadyPlayers(int? id)
+    {
+        sender.RequestForReadyPlayers(id);
+    }
     public void Send_Jump(Int32 unixTime)
     {
         sender.Send_Jump(unixTime);
@@ -174,6 +178,11 @@ public class Client : MonoBehaviour
     public void ReceiveErrorMessage(string message)
     {
         gameManager.GetComponent<GameManagerScript>().AddMessageToErrorLog(message);
+    }
+
+    public void ReceiveReadyPlayers(string[] arguments)
+    {
+        actionManager.GetComponent<ActionManager>().ReceivereadyPlayers(arguments);
     }
     //----------------------------------------------
 }

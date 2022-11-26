@@ -71,4 +71,11 @@ public class Send : MonoBehaviour
         byte[] requestData = Encoding.UTF8.GetBytes(message);
         socket.Send(requestData);
     }
+
+    public void RequestForReadyPlayers(int? id)
+    {
+        string message = $"/list_ready_players {id}\r\n\r\n";
+        byte[] requestData = Encoding.UTF8.GetBytes(message);
+        socket.Send(requestData);
+    }
 }

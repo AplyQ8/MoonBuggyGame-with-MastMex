@@ -29,6 +29,7 @@ public class ActionManager : MonoBehaviour
         lobbyID = client.currentLobbyID;
         client.SetActionManager(gameObject);
         List_Players();
+        RequestForReadyPlayers();
         lostMessage.enabled = false;
     }
 //-------------Send Requests-------------------------
@@ -50,6 +51,10 @@ public class ActionManager : MonoBehaviour
     private void List_Players()
     {
         client.Request_For_Player_List(lobbyID);
+    }
+    private void RequestForReadyPlayers()
+    {
+        client.ListReadyPlayers(lobbyID);
     }
 //---------------------------------------------------
 
@@ -78,7 +83,18 @@ public class ActionManager : MonoBehaviour
         lostMessage.enabled = true;
     }
 
-    public void Accept_player_List(string[] param, string playerID)
+    public void ReceivereadyPlayers(string[] param)
+    {
+        for (int i = 2; i < param.Length; i++)
+        {
+            foreach (var enemy in enemies)
+            {
+                if(enemy.GetComponent<EnemyScript>().CheckID(param[i]))
+                    enemy.GetComponent<EnemyScript>().ChangeStatus();
+            }
+        }
+    }
+        public void Accept_player_List(string[] param, string playerID)
     {
         for (int i = 3; i < param.Length - 1; i++)
         {
@@ -92,6 +108,8 @@ public class ActionManager : MonoBehaviour
             }
         }
     }
+
+    
 
     public void Player_Add_Event(string id)
     {

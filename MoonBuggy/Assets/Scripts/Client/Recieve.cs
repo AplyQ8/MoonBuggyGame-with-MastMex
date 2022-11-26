@@ -92,6 +92,9 @@ public class Recieve : MonoBehaviour
             case "/player_delete_event":
                 _threadManager.ExecuteOnMainThread(()=>{Player_Delete_Event(arguments[2]);});
                 break;
+            case "/list_ready_players":
+                _threadManager.ExecuteOnMainThread(()=>{ReceiveReadyPlayers(arguments);});
+                break;
             case "/start_game":
                 _threadManager.ExecuteOnMainThread(() => { StartGame(); });
                 break;
@@ -181,5 +184,10 @@ public class Recieve : MonoBehaviour
     private void StartGame()
     {
         client.StartGame();
+    }
+
+    private void ReceiveReadyPlayers(string[] param)
+    {
+        client.ReceiveReadyPlayers(param);
     }
 }
