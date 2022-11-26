@@ -21,12 +21,12 @@ public class Client : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void CreateConn()
+    public void CreateConn(string ip, int port)
     {
         socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         try
         {
-            socket.Connect("45.9.72.97", 5542);
+            socket.Connect(ip, port);
             Debug.Log("Connected to server\n");
             //Debug.Flush();
             reciever.SetSocket(socket);
@@ -148,6 +148,26 @@ public class Client : MonoBehaviour
     public void SetID(string id)
     {
         _id = id;
+    }
+
+    public void Player_Add_Event(string id)
+    {
+        actionManager.GetComponent<ActionManager>().Player_Add_Event(id);
+    }
+
+    public void Player_Ready_Event(string id)
+    {
+        actionManager.GetComponent<ActionManager>().Player_Ready_Event(id);
+    }
+
+    public void Player_Delete_event(string id)
+    {
+        actionManager.GetComponent<ActionManager>().Player_Delete_Event(id);
+    }
+
+    public void ReceiveErrorMessage(string message)
+    {
+        gameManager.GetComponent<GameManagerScript>().AddMessageToErrorLog(message);
     }
     //----------------------------------------------
 }

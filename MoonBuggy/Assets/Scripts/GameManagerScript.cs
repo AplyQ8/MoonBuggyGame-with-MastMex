@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,9 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] private Client client;
     [SerializeField] private GameObject content;
     [SerializeField] private GameObject lobbyPrefab;
-    
+    [SerializeField] private TMP_Text errorMessage;
+    [SerializeField] private GameObject errorLog;
+    [SerializeField] private List<GameObject> lobbyList = new List<GameObject>();
 
     private void Awake()
     {
@@ -46,6 +49,7 @@ public class GameManagerScript : MonoBehaviour
         lobby.transform.SetParent(content.transform);
         lobby.transform.localScale = new Vector3(1, 1, 1);
         lobby.GetComponent<LobbyPref_Script>().SetInformation(id);
+        lobbyList.Add(lobby);
     }
 
     public void Get_Request_Join_Lobby()
@@ -55,15 +59,24 @@ public class GameManagerScript : MonoBehaviour
 
     public void Make_Lobby_List(int length, string[] ids)
     {
-        // foreach (var child in content.GetComponentsInChildren<Transform>())
-        // {
-        //     Destroy(child.gameObject);
-        // }
+        foreach (var lobby in lobbyList)
+        {
+            lobbyList.Remove(lobby);
+            Destroy(lobby);
+        }
         for (int i = 2; i < length; i++)
         {
             if(ids[i] != "")
                 Get_Request_Create_Lobby(Convert.ToInt32(ids[i]));
         }
+    }
+
+    public void AddMessageToErrorLog(string message)
+    {
+        Instantiate(errorMessage, new Vector3(0, 0, 0), Quaternion.identity);
+        errorMessage.text = message;
+        errorMessage.transform.SetParent(errorLog.transform);
+        errorMessage.transform.localScale = new Vector3(1, 1, 1);
     }
     //----------------------------------------------
 }

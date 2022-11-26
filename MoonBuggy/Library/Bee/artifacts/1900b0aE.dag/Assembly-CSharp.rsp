@@ -383,6 +383,7 @@
 "Assets/Scripts/Client/Recieve.cs"
 "Assets/Scripts/Client/Send.cs"
 "Assets/Scripts/Client/Threadmanager.cs"
+"Assets/Scripts/EnemyScript.cs"
 "Assets/Scripts/GameManagerScript.cs"
 "Assets/Scripts/LobbyPref_Script.cs"
 "Assets/Scripts/MainMenuScript.cs"

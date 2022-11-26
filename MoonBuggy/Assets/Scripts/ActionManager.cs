@@ -19,6 +19,7 @@ public class ActionManager : MonoBehaviour
     [SerializeField] private GameObject enemyField;
     [SerializeField] private GameObject enemyPref;
     [SerializeField] private int? lobbyID;
+    private List<GameObject> enemies = new List<GameObject>();
     
     
     private void Awake()
@@ -87,6 +88,36 @@ public class ActionManager : MonoBehaviour
                 enemy.transform.SetParent(enemyField.transform);
                 enemy.transform.localScale = new Vector3(1, 1, 1);
                 enemy.GetComponent<EnemyScript>().SetID(param[i]);
+                enemies.Add(enemy);
+            }
+        }
+    }
+
+    public void Player_Add_Event(string id)
+    {
+        GameObject enemy = Instantiate(enemyPref, new Vector3(0, 0, 0), Quaternion.identity);
+        enemy.transform.SetParent(enemyField.transform);
+        enemy.transform.localScale = new Vector3(1, 1, 1);
+        enemy.GetComponent<EnemyScript>().SetID(id);
+    }
+
+    public void Player_Ready_Event(string id)
+    {
+        foreach (var enemy in enemies)
+        {
+            if (enemy.GetComponent<EnemyScript>().CheckID(id))
+                enemy.GetComponent<EnemyScript>().ChangeStatus();
+        }
+    }
+
+    public void Player_Delete_Event(string id)
+    {
+        foreach (var enemy in enemies)
+        {
+            if (enemy.GetComponent<EnemyScript>().CheckID(id))
+            {
+                enemies.Remove(enemy);
+                Destroy(enemy);
             }
         }
     }

@@ -45,7 +45,7 @@ public class Recieve : MonoBehaviour
                         SwitchFunc(param);
                         break;
                     case Status.ERROR:
-                        Debug.Log(commands[0]);
+                        _threadManager.ExecuteOnMainThread(()=> {ReceiveErrorMessage(param);});
                         break;
                 }
                
@@ -83,6 +83,15 @@ public class Recieve : MonoBehaviour
             case "/get_player_id":
                 _threadManager.ExecuteOnMainThread(()=> { Receive_Player_ID(arguments[2]);});
                 break;
+            case "/player_add_event":
+                _threadManager.ExecuteOnMainThread(()=>{Player_Add_Event(arguments[2]);});
+                break;
+            case "/player_ready_event":
+                _threadManager.ExecuteOnMainThread(()=>{Player_Ready_Event(arguments[2]);});
+                break;
+            case "/player_delete_event":
+                _threadManager.ExecuteOnMainThread(()=>{Player_Delete_Event(arguments[2]);});
+                break;
             case "/start_game":
                 _threadManager.ExecuteOnMainThread(() => { StartGame(); });
                 break;
@@ -90,10 +99,22 @@ public class Recieve : MonoBehaviour
                 break;
         }
     }
-    
-    
-    
 
+    private void Player_Add_Event(string id)
+    {
+        client.Player_Add_Event(id);
+    }
+
+    private void Player_Ready_Event(string id)
+    {
+        client.Player_Ready_Event(id);
+    }
+
+    private void Player_Delete_Event(string id)
+    {
+        client.Player_Delete_event(id);
+    }
+    
     private void Recieve_Lobby(int id)
     {
         client.Lobby_Creation(id);
@@ -122,6 +143,16 @@ public class Recieve : MonoBehaviour
     private void Receive_Player_List(string[] param)
     {
         client.Accept_Players(param);
+    }
+
+    private void ReceiveErrorMessage(string[] message)
+    {
+        string errorMessage = "";
+        for (int i = 0; i < message.Length; i++)
+        {
+            errorMessage += message[i];
+        }
+        client.ReceiveErrorMessage(errorMessage);
     }
 
     public void Accept_Jump()
