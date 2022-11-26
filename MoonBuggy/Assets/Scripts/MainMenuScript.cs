@@ -11,11 +11,12 @@ public class MainMenuScript : MonoBehaviour
     [SerializeField] private GameObject connectMenu;
     [SerializeField] private TMP_InputField portText;
     [SerializeField] private TMP_InputField ipText;
-    [SerializeField] private TMP_Text message;
+    [SerializeField] private GameObject message;
+    [SerializeField] private GameObject serverMessage;
 
     private void Awake()
     {
-        message.enabled = false;
+        message.SetActive(false);
         connectMenu.SetActive(false);
     }
     public void SoloGaming()
@@ -27,12 +28,12 @@ public class MainMenuScript : MonoBehaviour
     {
         if (portText.text == "" || ipText.text == "")
         {
-            message.enabled = true;
+            serverMessage.SetActive(false);
+            message.SetActive(true);
             return;
         }
-        message.enabled = false;
+        message.SetActive(false);
         client.GetComponent<Client>().CreateConn(ipText.text, Convert.ToInt32(portText.text));
-        SceneManager.LoadScene(2);
     }
 
     public void OpenMenu()

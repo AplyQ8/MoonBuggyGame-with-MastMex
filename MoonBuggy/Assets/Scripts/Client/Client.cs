@@ -12,12 +12,14 @@ public class Client : MonoBehaviour
     [SerializeField] private Send sender;
     [SerializeField] private GameObject gameManager;
     [SerializeField] private GameObject actionManager;
+    [SerializeField] private GameObject serverMessage;
     private Socket socket;
     public int? currentLobbyID;
     private string _id;
     
     private void Awake()
     {
+        serverMessage.SetActive(false);
         DontDestroyOnLoad(gameObject);
     }
 
@@ -27,16 +29,19 @@ public class Client : MonoBehaviour
         try
         {
             socket.Connect(ip, port);
+            serverMessage.SetActive(false);
             Debug.Log("Connected to server\n");
             //Debug.Flush();
             reciever.SetSocket(socket);
             StartListening();
             sender.SetSocket(socket);
             RequestPlayerID();
+            SceneManager.LoadScene(2);
         }
         catch (SocketException ex)
         {
             Debug.Log(ex.StackTrace);
+            serverMessage.SetActive(true);
         }
     }
 
