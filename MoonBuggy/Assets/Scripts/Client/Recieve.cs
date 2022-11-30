@@ -95,10 +95,11 @@ public class Recieve : MonoBehaviour
             case "/list_ready_players":
                 _threadManager.ExecuteOnMainThread(()=>{ReceiveReadyPlayers(arguments);});
                 break;
-            case "/start_game":
-                _threadManager.ExecuteOnMainThread(() => { StartGame(); });
+            case "/start_game_event":
+                _threadManager.ExecuteOnMainThread(() => { StartGame(Convert.ToDouble(arguments[2])); });
                 break;
-            case "/get_map":
+            case "/map_event":
+                _threadManager.ExecuteOnMainThread(() => { ReceivePlayerSpawnEvent(arguments);});
                 break;
         }
     }
@@ -181,13 +182,29 @@ public class Recieve : MonoBehaviour
         client.SetID(id);
     }
 
-    private void StartGame()
+    private void StartGame(double unixTime)
     {
-        client.StartGame();
+        DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+        dateTime = dateTime.AddSeconds( unixTime ).ToLocalTime();
+        DateTime now = DateTime.Now;
+        int secondsLeft = Convert.ToInt32((dateTime - now).TotalSeconds);
+        Debug.Log($"Received message at {now} to start game at {dateTime} => Left: {secondsLeft}");
+        client.StartGame(unixTime);
     }
 
     private void ReceiveReadyPlayers(string[] param)
     {
         client.ReceiveReadyPlayers(param);
+    }
+
+    private void ReceivePlayerSpawnEvent(string[] arguments)
+    {
+        string mes = "";
+        for (int i = 0; i < arguments.Length; i++)
+        {
+            mes += arguments[i] + " ";
+        }
+        Debug.Log(mes);
+        client.ReceivePlayerSpawnEvent(arguments);
     }
 }

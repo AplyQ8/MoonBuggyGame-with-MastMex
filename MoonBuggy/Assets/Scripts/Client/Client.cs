@@ -10,8 +10,7 @@ public class Client : MonoBehaviour
 {
     [SerializeField] private Recieve reciever;
     [SerializeField] private Send sender;
-    [SerializeField] private GameObject gameManager;
-    [SerializeField] private GameObject actionManager;
+    [SerializeField] private GameObject activeManager;
     [SerializeField] private GameObject serverMessage;
     private Socket socket;
     public int? currentLobbyID;
@@ -45,14 +44,9 @@ public class Client : MonoBehaviour
         }
     }
 
-    public void SetGamamanager(GameObject manager)
+    public void SetManager(GameObject manager)
     {
-        gameManager = manager;
-    }
-
-    public void SetActionManager(GameObject manager)
-    {
-        actionManager = manager;
+        activeManager = manager;
     }
 
     private void StartListening()
@@ -105,44 +99,48 @@ public class Client : MonoBehaviour
     {
         sender.Request_Player_ID();
     }
+    public void SendRequestForStartingGame()
+    {
+        sender.StartGame();
+    }
     //----------------------------------------------
     
     
     //-------------Get Request----------------------
     public void Lobby_Creation(int id)
     {
-        gameManager.GetComponent<GameManagerScript>().Get_Request_Create_Lobby(id);
+        activeManager.GetComponent<GameManagerScript>().Get_Request_Create_Lobby(id);
         currentLobbyID = id;
     }
 
     public void Joining_Lobby()
     {
-        gameManager.GetComponent<GameManagerScript>().Get_Request_Join_Lobby();
+        activeManager.GetComponent<GameManagerScript>().Get_Request_Join_Lobby();
     }
 
     public void Make_Lobby_List(int lengthOfList, string[] ids)
     {
-        gameManager.GetComponent<GameManagerScript>().Make_Lobby_List(lengthOfList, ids);
+        activeManager.GetComponent<GameManagerScript>().Make_Lobby_List(lengthOfList, ids);
     }
 
     public void Accept_Leave_Lobby()
     {
-        actionManager.GetComponent<ActionManager>().Accept_Request_Leave_Lobby();
+        activeManager.GetComponent<ActionManager>().Accept_Request_Leave_Lobby();
     }
 
     public void Accept_Readiness()
     {
-        actionManager.GetComponent<ActionManager>().Accept_Readiness();
+        activeManager.GetComponent<ActionManager>().Accept_Readiness();
     }
 
-    public void StartGame()
+    public void StartGame(double unixTime)
     {
-        actionManager.GetComponent<ActionManager>().StartGame();
+        activeManager.GetComponent<ActionManager>().StartGame(unixTime);
     }
-
+    
     public void Accept_Players(string[] param)
     {
-        actionManager.GetComponent<ActionManager>().Accept_player_List(param, _id);
+        activeManager.GetComponent<ActionManager>().Accept_player_List(param, _id);
     }
 
     public void Accept_Jump()
@@ -152,7 +150,7 @@ public class Client : MonoBehaviour
 
     public void LostTheGame()
     {
-        actionManager.GetComponent<ActionManager>().LostTheGame();
+        activeManager.GetComponent<ActionManager>().LostTheGame();
     }
 
     public void SetID(string id)
@@ -162,27 +160,31 @@ public class Client : MonoBehaviour
 
     public void Player_Add_Event(string id)
     {
-        actionManager.GetComponent<ActionManager>().Player_Add_Event(id);
+        activeManager.GetComponent<ActionManager>().Player_Add_Event(id);
     }
 
     public void Player_Ready_Event(string id)
     {
-        actionManager.GetComponent<ActionManager>().Player_Ready_Event(id);
+        activeManager.GetComponent<ActionManager>().Player_Ready_Event(id);
     }
 
     public void Player_Delete_event(string id)
     {
-        actionManager.GetComponent<ActionManager>().Player_Delete_Event(id);
+        activeManager.GetComponent<ActionManager>().Player_Delete_Event(id);
     }
 
     public void ReceiveErrorMessage(string message)
     {
-        gameManager.GetComponent<GameManagerScript>().AddMessageToErrorLog(message);
+        activeManager.GetComponent<GameManagerScript>().AddMessageToErrorLog(message);
     }
 
     public void ReceiveReadyPlayers(string[] arguments)
     {
-        actionManager.GetComponent<ActionManager>().ReceivereadyPlayers(arguments);
+        activeManager.GetComponent<ActionManager>().ReceivereadyPlayers(arguments);
+    }
+    public void ReceivePlayerSpawnEvent(string[] arguments)
+    {
+        activeManager.GetComponent<ActionManager>().ReceivePlayerSpawnEvent(arguments);
     }
     //----------------------------------------------
 }

@@ -7,6 +7,9 @@ public class EnemyScript : MonoBehaviour
 {
     [SerializeField] private GameObject statusImage;
     [SerializeField] private Sprite checkMark;
+    [SerializeField] private GameObject buggy;
+    [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private GameObject wall;
     private string _id;
     private bool _status;
 
@@ -21,7 +24,17 @@ public class EnemyScript : MonoBehaviour
     { 
         _status = !_status;
         statusImage.GetComponent<Image>().sprite = checkMark;
-    } 
+    }
+
+    public Vector3 ReturnSpawnPos()
+    {
+        return spawnPoint.transform.position;
+    }
+
+    public Vector3 ReturnWallPos()
+    {
+        return wall.transform.position;
+    }
 
 
 }

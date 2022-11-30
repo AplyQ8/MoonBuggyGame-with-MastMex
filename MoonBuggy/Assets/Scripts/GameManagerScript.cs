@@ -19,7 +19,7 @@ public class GameManagerScript : MonoBehaviour
     {
         tcpClient = GameObject.Find("Client");
         client = tcpClient.GetComponent<Client>();
-        client.SetGamamanager(gameObject);
+        client.SetManager(gameObject);
         Send_request_For_Lobby_List();
     }
     

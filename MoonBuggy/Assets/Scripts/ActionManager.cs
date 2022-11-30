@@ -1,13 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = System.Random;
 
 public class ActionManager : MonoBehaviour
 {
+    [SerializeField] private GameObject wall;
+    [SerializeField] private GameObject startBtn;
     [SerializeField] private GameObject tcpClient;
     [SerializeField] private Client client;
     [SerializeField] private Sprite checkMark;
@@ -18,8 +22,14 @@ public class ActionManager : MonoBehaviour
     [SerializeField] private TMP_Text lostMessage;
     [SerializeField] private GameObject enemyField;
     [SerializeField] private GameObject enemyPref;
+    [SerializeField] private GameObject backCount;
+    [SerializeField] private GameObject backGround;
+    [SerializeField] private Spawner spawner;
+    [SerializeField] private GameObject playerSpawnPos;
+    [SerializeField] private GameObject startGameBTN;
     [SerializeField] private int? lobbyID;
     private List<GameObject> enemies = new List<GameObject>();
+    private TMP_Text backCountText;
     
     
     private void Awake()
@@ -27,10 +37,14 @@ public class ActionManager : MonoBehaviour
         tcpClient = GameObject.Find("Client");
         client = tcpClient.GetComponent<Client>();
         lobbyID = client.currentLobbyID;
-        client.SetActionManager(gameObject);
+        client.SetManager(gameObject);
         List_Players();
         RequestForReadyPlayers();
         lostMessage.enabled = false;
+        backCount.SetActive(false);
+        backCountText = backCount.GetComponent<TMP_Text>();
+        backGround.GetComponent<MoveBackground>().enabled = false;
+        player.GetComponent<BuggyScript>().enabled = false;
     }
 //-------------Send Requests-------------------------
     public void SendRequest_for_Leaving_Lobby()
@@ -70,13 +84,34 @@ public class ActionManager : MonoBehaviour
         waitingForOthers.enabled = true;
     }
 
-    public void StartGame()
+    public void StartGame(double unixTime)
     {
-        player.GetComponent<BuggyScript>().enabled = true;
+        startBtn.SetActive(false);
         readyBtn.SetActive(false);
-        waitingForOthers.enabled = false;
+        backCount.SetActive(true);
+        StartCoroutine(BackCount(SecondsLeft(unixTime)));
+        //BackCountWithThread(SecondsLeft(unixTime));
+        
     }
 
+    public void SendRequestForStartingGame()
+    {
+        client.SendRequestForStartingGame();
+    }
+    IEnumerator BackCount(int seconds)
+    {
+        while (seconds > 0)
+        {
+            backCountText.text = seconds.ToString();
+            seconds--;
+            yield return new WaitForSeconds(1f);
+        }
+        player.GetComponent<BuggyScript>().enabled = true;
+        backCount.SetActive(false);
+        backGround.GetComponent<MoveBackground>().enabled = true;
+        startGameBTN.SetActive(false);
+        
+    }
     public void LostTheGame()
     {
         player.GetComponent<BuggyScript>().enabled = false;
@@ -142,5 +177,56 @@ public class ActionManager : MonoBehaviour
             }
         }
     }
-//---------------------------------------------------    
+
+    public void ReceivePlayerSpawnEvent(string[] arguments)
+    {
+        //spawner.SpawnBarrier(playerSpawnPos.GetComponent<Transform>().position, type, SecondsLeft(startTime), speed);
+        
+        //проверка на то, для врага приходит или нет
+        
+        //Если приходит игроку
+        for (int i = 2; i < arguments.Length-1; i += 2)
+        {
+            DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            dateTime = dateTime.AddSeconds( Convert.ToDouble(arguments[i + 1]) ).ToLocalTime();
+            Debug.Log($"Received message to spawn {arguments[i]} at {dateTime}");
+            StartCoroutine(
+                WaitForCall(SecondsLeft(Convert.ToDouble(arguments[i + 1])),
+                playerSpawnPos.GetComponent<Transform>().position,
+                wall.GetComponent<Transform>().position,
+                arguments[i],
+                5f));
+        }
+    }
+    
+    
+//---------------------------------------------------  
+    private int SecondsLeft(double unixTime)
+    {
+        DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+        dateTime = dateTime.AddSeconds( unixTime ).ToLocalTime();
+        
+        DateTime now = DateTime.Now;
+        int secondsLeft = Convert.ToInt32((dateTime - now).TotalSeconds);
+        return secondsLeft;
+    }
+
+    private IEnumerator WaitForCall(int seconds, Vector3 spawnPos,Vector3 target, string type, float speed)
+    {
+        while (seconds > 0)
+        {
+            seconds--;
+            yield return new WaitForSeconds(1f);
+        }
+        spawner.SpawnBarrier(spawnPos,target, type, speed);
+        foreach (var enemy in enemies)
+        {
+            spawner.SpawnBarrier(
+                enemy.GetComponent<EnemyScript>().ReturnSpawnPos(),
+                enemy.GetComponent<EnemyScript>().ReturnWallPos(),
+                type,
+                speed);
+        }
+        backGround.GetComponent<MoveBackground>().SetSpeed(speed);
+    }
 }
