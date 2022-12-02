@@ -34,7 +34,7 @@ public class BuggyScript : MonoBehaviour
         if (col.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-            //Debug.Log($"Started jump at: {DateTime.Now}");
+            //Debug.Log($"Ended jump at: {DateTime.Now.Second}:{DateTime.Now.Millisecond}");
         }
 
         
@@ -45,7 +45,7 @@ public class BuggyScript : MonoBehaviour
         if (col.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
-            //Debug.Log($"Ended jump at: {DateTime.Now}");
+            //Debug.Log($"Started jump at: {DateTime.Now.Second}:{DateTime.Now.Millisecond}");
         }
     }
 

@@ -25,6 +25,7 @@ public class BarrierScript : MonoBehaviour
         Vector3 dir = transform.right * (-1);
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, _speed * Time.deltaTime);
         if(transform.position.x <= -11) Destroy(gameObject);
+        //if(transform.position.x <= -5.85) Debug.Log($"{gameObject.name} has reached buggy");
 
     }
 
@@ -42,7 +43,7 @@ public class BarrierScript : MonoBehaviour
         }
         if (col.gameObject.name == "Buggy")
         {
-            Debug.Log($"{gameObject.name} reached buggy at {DateTime.Now}");
+            //Debug.Log($"{gameObject.name} reached buggy at {DateTime.Now}");
         }
         
     }

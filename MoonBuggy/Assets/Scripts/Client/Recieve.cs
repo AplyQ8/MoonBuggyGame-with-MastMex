@@ -112,13 +112,13 @@ public class Recieve : MonoBehaviour
             case "/map_event":
                 _threadManager.ExecuteOnMainThread(() => { ReceivePlayerSpawnEvent(arguments);});
                 break;
-            case "/event_up_speed":
+            case "/speed_up_event":
                 _threadManager.ExecuteOnMainThread(() => {EventSpeedUp(Convert.ToSingle(arguments[2]));});
                 break;
-            case "/event_jump_player":
+            case "/player_jump_event":
                 _threadManager.ExecuteOnMainThread(()=> EventJumpPlayer(arguments[2]));
                 break;
-            case "/event_death_player":
+            case "/player_death_event":
                 _threadManager.ExecuteOnMainThread(()=> EventDeathPlayer(arguments[2]));
                 break;
             case "/Death":
@@ -132,7 +132,7 @@ public class Recieve : MonoBehaviour
         thread.Abort();
         _socket.Close();
         SceneManager.LoadScene(0);
-        
+        Destroy(gameObject);
     }
 
     private void Player_Add_Event(string id)
@@ -201,7 +201,7 @@ public class Recieve : MonoBehaviour
         dateTime = dateTime.AddSeconds( unixTime ).ToLocalTime();
         DateTime now = DateTime.Now;
         int secondsLeft = Convert.ToInt32((dateTime - now).TotalSeconds);
-        Debug.Log($"Received message at {now} to start game at {dateTime} => Left: {secondsLeft}");
+        //Debug.Log($"Received message at {now} to start game at {dateTime} => Left: {secondsLeft}");
         client.StartGame(unixTime);
     }
 

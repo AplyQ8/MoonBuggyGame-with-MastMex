@@ -54,6 +54,8 @@ public class Client : MonoBehaviour
         reciever.StartListening();
     }
 
+    public string GetID() => _id;
+
     //-------------Send Request---------------------
     public void Create_Lobby()
     {

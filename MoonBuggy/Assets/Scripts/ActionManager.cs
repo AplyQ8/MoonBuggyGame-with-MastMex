@@ -124,6 +124,8 @@ public class ActionManager : MonoBehaviour
         timer.GetComponent<TimerScript>().ReceiveDeath();
         player.GetComponent<BuggyScript>().enabled = false;
         lostMessage.enabled = true;
+        backGround.GetComponent<MoveBackground>().SetSpeed(0);
+        Debug.Log("YOU DEAD");
     }
 
     public void ReceivereadyPlayers(string[] param)
@@ -202,7 +204,7 @@ public class ActionManager : MonoBehaviour
         {
             DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
             dateTime = dateTime.AddSeconds( Convert.ToDouble(arguments[i + 1]) ).ToLocalTime();
-            Debug.Log($"Received message to spawn {arguments[i]} at {dateTime}");
+            //Debug.Log($"Received message to spawn {arguments[i]} at {dateTime}");
             var seconds = SecondsLeft(Convert.ToDouble(arguments[i + 1]));
             var spawnPos = _currentSpeed * seconds;
             spawner.SpawnBarrier(
@@ -228,6 +230,11 @@ public class ActionManager : MonoBehaviour
         switch (eventType)
         {
             case "Death":
+                if (client.GetComponent<Client>().GetID() == id)
+                {
+                    LostTheGame();
+                    break;
+                }
                 for (int i = 0; i < enemies.Count; i++)
                 {
                     if (enemies[i].GetComponent<EnemyScript>().CheckID(id))

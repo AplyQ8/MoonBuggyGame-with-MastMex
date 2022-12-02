@@ -1,0 +1,611 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1670000835851846, "dur": 494338, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1670000835852070, "dur": 3110, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1670000835855182, "dur": 47635, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1670000835902819, "dur": 290769, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1670000836193591, "dur": 142907, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1670000836336499, "dur": 9684, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1670000836346520, "dur": 9, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1670000836046980, "dur": 122945, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1670000836047855, "dur": 45274, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1670000836156495, "dur": 3816, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1670000836160314, "dur": 9605, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1670000836160953, "dur": 8303, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1670000836173893, "dur": 1141, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1670000836172997, "dur": 2068, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1670000836346604, "dur": 1645, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1670000836233242, "dur":804, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836234052, "dur":83, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1670000836234163, "dur":16, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1670000836234179, "dur":340, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1670000836234544, "dur":484, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836235028, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315556, "dur":263, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315819, "dur":16, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315835, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315837, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315841, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315842, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315847, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315848, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315852, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315853, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315857, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315858, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315862, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315863, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315866, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315868, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315871, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315872, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315876, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315877, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315880, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315882, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315886, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315887, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315890, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315902, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836315920, "dur":1454, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1670000836234796, "dur":237, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836235035, "dur":3278, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836238320, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1670000836238326, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836238865, "dur":255, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1670000836239123, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1670000836239137, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836239368, "dur":2612, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1670000836241983, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1670000836242016, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836242382, "dur":3408, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1670000836245817, "dur":50, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":1, "ts":1670000836245872, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836245877, "dur":1843, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":1, "ts":1670000836247731, "dur":12537, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy.exe" }}
+,{ "pid":12345, "tid":1, "ts":1670000836260271, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836260275, "dur":1242, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy.exe" }}
+,{ "pid":12345, "tid":1, "ts":1670000836261530, "dur":201, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836261733, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836261738, "dur":1890, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836263641, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836263746, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836263751, "dur":1752, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836265515, "dur":282, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836265800, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836265817, "dur":1238, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836267070, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836267183, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836267187, "dur":1108, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836268305, "dur":291, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836268598, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836268602, "dur":1492, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836270106, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836270187, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836270191, "dur":1801, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836272008, "dur":400, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836272411, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836272415, "dur":1399, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836273830, "dur":7671, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836281505, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836281509, "dur":5524, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":1, "ts":1670000836287050, "dur":13, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/level3" }}
+,{ "pid":12345, "tid":1, "ts":1670000836287072, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836287076, "dur":2693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/level3" }}
+,{ "pid":12345, "tid":1, "ts":1670000836289783, "dur":2580, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1670000836292366, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1670000836292372, "dur":637, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/boot.config" }}
+,{ "pid":12345, "tid":1, "ts":1670000836293018, "dur":22542, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836234831, "dur":211, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836235042, "dur":3278, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836238321, "dur":327, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1670000836238652, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836239594, "dur":21599, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1670000836261212, "dur":185, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836261400, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836261405, "dur":1323, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836262740, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836262840, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836262844, "dur":1591, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836264449, "dur":360, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836264812, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836264817, "dur":1272, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836266100, "dur":300, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836266416, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836266420, "dur":1172, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836267602, "dur":322, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836267927, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836267932, "dur":1614, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836269560, "dur":102, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836269665, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836269669, "dur":1439, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836271122, "dur":467, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836271592, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836271596, "dur":1667, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836273274, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836273362, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836273365, "dur":1315, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836274691, "dur":570, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836275264, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836275269, "dur":1975, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836277255, "dur":4031, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836281289, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836281295, "dur":2561, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":2, "ts":1670000836283870, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1670000836283890, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836283896, "dur":4311, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1670000836288223, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/level1" }}
+,{ "pid":12345, "tid":2, "ts":1670000836288236, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836288240, "dur":1262, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/level1" }}
+,{ "pid":12345, "tid":2, "ts":1670000836289518, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":2, "ts":1670000836289538, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1670000836289541, "dur":1520, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":2, "ts":1670000836291072, "dur":24483, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836234820, "dur":217, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836235037, "dur":3280, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836238320, "dur":198, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1670000836238520, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836239826, "dur":4074, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1670000836243915, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1670000836243942, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836243975, "dur":17187, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1670000836261178, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836261348, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836261353, "dur":1624, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836262989, "dur":186, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836263193, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836263197, "dur":2320, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836265538, "dur":323, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836265864, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836265869, "dur":1130, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836267009, "dur":152, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836267164, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836267194, "dur":1323, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836268528, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836268615, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836268619, "dur":1144, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836269771, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836269932, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836269936, "dur":1322, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836271269, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836271356, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836271361, "dur":1033, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836272408, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836272494, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836272497, "dur":1321, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.Tilemap.Extras.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836273829, "dur":214, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836274045, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836274049, "dur":1090, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836275151, "dur":98, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836275253, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836275258, "dur":2137, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836277406, "dur":587, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836277996, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836278000, "dur":1522, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":3, "ts":1670000836279536, "dur":109, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":3, "ts":1670000836279648, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836279806, "dur":794, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":3, "ts":1670000836280620, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/sharedassets3.assets" }}
+,{ "pid":12345, "tid":3, "ts":1670000836280636, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836280640, "dur":2140, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/sharedassets3.assets" }}
+,{ "pid":12345, "tid":3, "ts":1670000836282800, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":3, "ts":1670000836282816, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836282820, "dur":1054, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/sharedassets2.assets" }}
+,{ "pid":12345, "tid":3, "ts":1670000836284021, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":3, "ts":1670000836284040, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836284044, "dur":2321, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":3, "ts":1670000836286379, "dur":5492, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":3, "ts":1670000836291875, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1670000836291886, "dur":914, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":3, "ts":1670000836292819, "dur":22737, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836234850, "dur":196, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836235046, "dur":3273, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836238320, "dur":6595, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1670000836244919, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836244925, "dur":921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1670000836245861, "dur":18194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836264058, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836264217, "dur":1234, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836265461, "dur":309, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836265773, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836265778, "dur":1231, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836267020, "dur":305, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836267328, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836267332, "dur":1171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836268516, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836268610, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836268614, "dur":1422, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836270049, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836270131, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836270136, "dur":1428, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836271577, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836271693, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836271697, "dur":1232, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836272940, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836273030, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836273034, "dur":1365, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836274411, "dur":241, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836274655, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836274661, "dur":1142, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836275816, "dur":504, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836276323, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836276328, "dur":1183, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836277522, "dur":181, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836277706, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836277710, "dur":905, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836278624, "dur":175, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836278802, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836279366, "dur":840, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":4, "ts":1670000836280218, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/sharedassets3.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1670000836280236, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1670000836280239, "dur":16136, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/sharedassets3.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1670000836296390, "dur":19168, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836234873, "dur":177, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836235050, "dur":3266, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836238321, "dur":6237, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1670000836244562, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836244568, "dur":959, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":5, "ts":1670000836245541, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":5, "ts":1670000836245577, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836245581, "dur":4943, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":5, "ts":1670000836250543, "dur":401, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836250947, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836250952, "dur":976, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836251942, "dur":403, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836252348, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836252352, "dur":646, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836253009, "dur":119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836253130, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836253135, "dur":977, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836254121, "dur":260, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836254383, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836254388, "dur":1011, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836255411, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836255499, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836255502, "dur":1767, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836257281, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836257416, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836257420, "dur":1176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836258612, "dur":320, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836258935, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836258940, "dur":789, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836259743, "dur":119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836259865, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836259869, "dur":1449, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836261329, "dur":281, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836261644, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836261649, "dur":1343, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836263004, "dur":339, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836263345, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836263349, "dur":1354, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836264717, "dur":416, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836265135, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836265138, "dur":1284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836266438, "dur":383, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836266823, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836266827, "dur":1239, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836268079, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836268249, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836268253, "dur":1811, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836270074, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836270146, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836270150, "dur":1897, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836272063, "dur":535, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836272600, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836272605, "dur":1345, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836273962, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836274051, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836274055, "dur":1110, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836275178, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836275336, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836275340, "dur":1901, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836277257, "dur":279, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836277539, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836277544, "dur":938, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836278493, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836278628, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836278632, "dur":1205, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":5, "ts":1670000836279862, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":5, "ts":1670000836279897, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836279912, "dur":1174, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":5, "ts":1670000836281101, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1670000836281124, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836281127, "dur":2609, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/sharedassets2.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1670000836283769, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":5, "ts":1670000836283796, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836283827, "dur":2115, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":5, "ts":1670000836285960, "dur":131, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":5, "ts":1670000836286094, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836286101, "dur":3158, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":5, "ts":1670000836289279, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/level0" }}
+,{ "pid":12345, "tid":5, "ts":1670000836289295, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1670000836289300, "dur":1554, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/level0" }}
+,{ "pid":12345, "tid":5, "ts":1670000836290869, "dur":24690, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1670000836234898, "dur":156, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1670000836235054, "dur":3260, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1670000836238320, "dur":6964, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":6, "ts":1670000836245287, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1670000836245511, "dur":881, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":6, "ts":1670000836246406, "dur":57354, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1670000836303763, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1670000836303769, "dur":11747, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1670000836315530, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":6, "ts":1670000836315532, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836234921, "dur":137, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836235058, "dur":3265, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836238324, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1670000836238420, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836239658, "dur":4099, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":7, "ts":1670000836243770, "dur":6103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1670000836249875, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836249881, "dur":741, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1670000836250634, "dur":541, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836251178, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836251184, "dur":954, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836252152, "dur":698, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836252853, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836252862, "dur":921, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836253795, "dur":327, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836254125, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836254154, "dur":1002, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836255170, "dur":466, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836255639, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836255644, "dur":1396, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836257056, "dur":709, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836257768, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836257773, "dur":988, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836258778, "dur":393, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836259174, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836259178, "dur":741, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836259931, "dur":355, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836260289, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836260350, "dur":1194, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836261557, "dur":9999, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836271560, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836271565, "dur":1266, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836272844, "dur":142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836272988, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836272992, "dur":1435, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836274437, "dur":709, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836275148, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836275153, "dur":2019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836277184, "dur":7194, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836284381, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836284386, "dur":3463, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":7, "ts":1670000836287864, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/level2" }}
+,{ "pid":12345, "tid":7, "ts":1670000836287888, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1670000836287893, "dur":1981, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/level2" }}
+,{ "pid":12345, "tid":7, "ts":1670000836289891, "dur":25660, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836234951, "dur":111, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836235062, "dur":3259, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836238324, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1670000836238412, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836239816, "dur":2854, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1670000836242684, "dur":4845, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1670000836247543, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836247551, "dur":855, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1670000836248426, "dur":446, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836248875, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836249019, "dur":491, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836249522, "dur":763, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836250288, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836250314, "dur":768, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836251173, "dur":444, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836251620, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836251624, "dur":730, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836252368, "dur":483, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836252854, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836252859, "dur":1000, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836253876, "dur":326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836254205, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836254210, "dur":891, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836255112, "dur":280, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836255395, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836255400, "dur":1153, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836256565, "dur":995, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836257563, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836257567, "dur":2019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836259599, "dur":323, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836259925, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836259929, "dur":1187, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836261129, "dur":499, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836261655, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836261660, "dur":1320, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836262995, "dur":312, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836263309, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836263311, "dur":1664, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836264999, "dur":304, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836265306, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836265311, "dur":1108, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836266427, "dur":229, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836266659, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836266663, "dur":1347, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836268024, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836268167, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836268170, "dur":1210, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836269394, "dur":91, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836269488, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836269492, "dur":973, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836270476, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836270567, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836270571, "dur":1215, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836271798, "dur":416, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836272217, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836272222, "dur":1148, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836273379, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836273473, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836273475, "dur":1173, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836274659, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836274750, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836274754, "dur":1398, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836276165, "dur":457, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836276624, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836276628, "dur":1397, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836278035, "dur":4397, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836282436, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836282442, "dur":4130, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1670000836286590, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1670000836286610, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1670000836286614, "dur":3917, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1670000836290546, "dur":25006, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836234974, "dur":91, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836235065, "dur":3250, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836238320, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":9, "ts":1670000836238416, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836239793, "dur":3127, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":9, "ts":1670000836242932, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":9, "ts":1670000836242961, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836242975, "dur":5427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":9, "ts":1670000836248424, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1670000836248463, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836248635, "dur":4715, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1670000836253364, "dur":316, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836253684, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836253688, "dur":609, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836254305, "dur":316, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836254624, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836254640, "dur":828, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836255478, "dur":113, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836255593, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836255597, "dur":1248, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836256858, "dur":280, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836257140, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836257146, "dur":1038, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836258197, "dur":227, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836258426, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836258452, "dur":913, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836259378, "dur":282, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836259662, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836259667, "dur":1143, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836260819, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836260922, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836260926, "dur":1081, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836262019, "dur":323, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836262345, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836262350, "dur":1294, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836263673, "dur":359, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836264035, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836264039, "dur":1248, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836265299, "dur":742, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836266044, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836266049, "dur":2304, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836268365, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836268448, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836268453, "dur":1600, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836270065, "dur":76, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836270143, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836270147, "dur":1927, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836272085, "dur":926, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836273014, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836273019, "dur":1399, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836274431, "dur":311, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836274745, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836274750, "dur":1450, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836276220, "dur":6791, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836283014, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1670000836283019, "dur":8035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":9, "ts":1670000836291068, "dur":24485, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836234994, "dur":75, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836235069, "dur":3258, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836238327, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":10, "ts":1670000836238414, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836239612, "dur":21508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":10, "ts":1670000836261137, "dur":373, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836261513, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836261517, "dur":1283, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836262812, "dur":103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836262917, "dur":43, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836262964, "dur":1583, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836264562, "dur":297, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836264861, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836264865, "dur":955, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836265831, "dur":162, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836265996, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836266001, "dur":1715, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836267729, "dur":479, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836268211, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836268215, "dur":1668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836269896, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836269979, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836269983, "dur":1498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836271733, "dur":299, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836272035, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836272039, "dur":1462, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836273515, "dur":108, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836273625, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836273630, "dur":1128, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836274770, "dur":178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836274950, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836274973, "dur":1517, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836276502, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836276599, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836276603, "dur":1201, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836277817, "dur":10799, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836288619, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1670000836288625, "dur":4971, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":10, "ts":1670000836293606, "dur":21964, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1670000836235013, "dur":59, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1670000836235072, "dur":3250, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1670000836238322, "dur":6418, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":11, "ts":1670000836244743, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1670000836244768, "dur":1287, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":11, "ts":1670000836246071, "dur":54829, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":11, "ts":1670000836300903, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1670000836300929, "dur":3802, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":11, "ts":1670000836304744, "dur":10813, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836235039, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836235040, "dur":3284, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836238324, "dur":6919, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1670000836245247, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836245252, "dur":1484, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1670000836246750, "dur":4032, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":12, "ts":1670000836250784, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836250789, "dur":1524, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":12, "ts":1670000836252330, "dur":593, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836252926, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836252931, "dur":957, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836253900, "dur":349, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836254252, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836254256, "dur":863, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836255133, "dur":480, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836255614, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836255637, "dur":1576, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836257228, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836257337, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836257341, "dur":914, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836258278, "dur":123, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836258403, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836258407, "dur":872, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836259291, "dur":309, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836259615, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836259620, "dur":1244, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836260879, "dur":424, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836261306, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836261311, "dur":1450, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836262776, "dur":317, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836263096, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836263100, "dur":1836, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836264949, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836265058, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836265063, "dur":1130, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836266203, "dur":8555, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836274761, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836274767, "dur":1449, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836276232, "dur":5437, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836281672, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836281677, "dur":5042, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":12, "ts":1670000836286735, "dur":71, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/resources.assets" }}
+,{ "pid":12345, "tid":12, "ts":1670000836286809, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836286812, "dur":2667, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/resources.assets" }}
+,{ "pid":12345, "tid":12, "ts":1670000836289496, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles D:/BuggyGameBuild/MoonBuggy_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":12, "ts":1670000836289516, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1670000836289520, "dur":1406, "ph":"X", "name": "CopyFiles",  "args": { "detail":"D:/BuggyGameBuild/MoonBuggy_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":12, "ts":1670000836290942, "dur":24610, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1670000836318557, "dur":1344, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1670000836348290, "dur": 1662, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1670000836346509, "dur": 3465, "ph": "X", "name": "Write chrome-trace events", "args": {} },

@@ -14,6 +14,7 @@ public class LobbyPref_Script : MonoBehaviour
     private void Awake()
     {
         gameManager = GameObject.Find("GameManager");
+        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(604.47f, 138.38f);
     }
 
     public void SetInformation(int _id)

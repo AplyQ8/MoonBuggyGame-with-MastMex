@@ -33,7 +33,8 @@ public class TimerScript : MonoBehaviour
             if (seconds == 59)
             {
                 minutes++;
-                seconds = -1;
+                seconds = 0;
+                milliseconds = -1;
             }
             milliseconds += 1;
             text.text = $"{minutes}:{seconds}:{milliseconds}";
