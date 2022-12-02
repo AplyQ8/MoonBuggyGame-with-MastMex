@@ -380,6 +380,7 @@
 "Assets/Scripts/BuggyScript.cs"
 "Assets/Scripts/Buttons/ReadyBtn_Script.cs"
 "Assets/Scripts/Buttons/Resizer.cs"
+"Assets/Scripts/CalculatationClass.cs"
 "Assets/Scripts/Client/Client.cs"
 "Assets/Scripts/Client/Recieve.cs"
 "Assets/Scripts/Client/Send.cs"

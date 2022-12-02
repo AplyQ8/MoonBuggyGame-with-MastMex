@@ -8,6 +8,7 @@ TagManager:
   - LongRock
   - Hole
   - Barrier
+  - Ground
   layers:
   - Default
   - TransparentFX

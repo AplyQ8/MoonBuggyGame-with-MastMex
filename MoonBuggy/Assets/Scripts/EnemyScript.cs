@@ -36,5 +36,15 @@ public class EnemyScript : MonoBehaviour
         return wall.transform.position;
     }
 
+    public float ReturnEnemyXPos()
+    {
+        return gameObject.transform.position.x;
+    }
+
+    public float ReturnEnemyYPos()
+    {
+        return gameObject.transform.position.y;
+    }
+
 
 }

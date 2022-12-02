@@ -17,15 +17,20 @@ public class BarrierScript : MonoBehaviour
         _speed = speed;
         _target = target;
     }
+
+    
     private void Move()
     {
         //Vector3 dir = new Vector3(73, _yPos);
-        //Vector3 dir = transform.right * (-1);
-        transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);
+        Vector3 dir = transform.right * (-1);
+        transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, _speed * Time.deltaTime);
+        if(transform.position.x <= -11) Destroy(gameObject);
+
     }
 
     void Update()
     {
+        //_speed += 0.2f;
         Move();
     }
 
@@ -34,6 +39,10 @@ public class BarrierScript : MonoBehaviour
         if (col.gameObject.name == "Wall")
         {
             Destroy(gameObject);
+        }
+        if (col.gameObject.name == "Buggy")
+        {
+            Debug.Log($"{gameObject.name} reached buggy at {DateTime.Now}");
         }
         
     }

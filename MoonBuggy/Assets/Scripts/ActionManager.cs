@@ -30,6 +30,8 @@ public class ActionManager : MonoBehaviour
     [SerializeField] private int? lobbyID;
     private List<GameObject> enemies = new List<GameObject>();
     private TMP_Text backCountText;
+    private float _currentSpeed = 5f;
+    private Vector3 _playerPos;
     
     
     private void Awake()
@@ -45,6 +47,7 @@ public class ActionManager : MonoBehaviour
         backCountText = backCount.GetComponent<TMP_Text>();
         backGround.GetComponent<MoveBackground>().enabled = false;
         player.GetComponent<BuggyScript>().enabled = false;
+        _playerPos = player.transform.position;
     }
 //-------------Send Requests-------------------------
     public void SendRequest_for_Leaving_Lobby()
@@ -177,25 +180,35 @@ public class ActionManager : MonoBehaviour
             }
         }
     }
+    public void IncreaseSpeed(float acceleration)
+    {
+        _currentSpeed += acceleration;
+        backGround.GetComponent<MoveBackground>().SetSpeed(_currentSpeed);
+    }
 
     public void ReceivePlayerSpawnEvent(string[] arguments)
     {
-        //spawner.SpawnBarrier(playerSpawnPos.GetComponent<Transform>().position, type, SecondsLeft(startTime), speed);
-        
-        //проверка на то, для врага приходит или нет
-        
-        //Если приходит игроку
         for (int i = 2; i < arguments.Length-1; i += 2)
         {
             DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
             dateTime = dateTime.AddSeconds( Convert.ToDouble(arguments[i + 1]) ).ToLocalTime();
             Debug.Log($"Received message to spawn {arguments[i]} at {dateTime}");
-            StartCoroutine(
-                WaitForCall(SecondsLeft(Convert.ToDouble(arguments[i + 1])),
-                playerSpawnPos.GetComponent<Transform>().position,
-                wall.GetComponent<Transform>().position,
+            var seconds = SecondsLeft(Convert.ToDouble(arguments[i + 1]));
+            var spawnPos = _currentSpeed * seconds;
+            spawner.SpawnBarrier(
+                new Vector3(_playerPos.x + spawnPos, _playerPos.y - 0.4f, 0),
+                wall.transform.position,
                 arguments[i],
-                5f));
+                _currentSpeed);
+            foreach (var enemy in enemies)
+            {
+                var enemyScript = enemy.GetComponent<EnemyScript>();
+                spawner.SpawnBarrier(
+                    new Vector3(enemyScript.ReturnEnemyXPos()+spawnPos, enemyScript.ReturnEnemyYPos() - 0.4f, 0),
+                    enemy.GetComponent<EnemyScript>().ReturnWallPos(),
+                    arguments[i],
+                    _currentSpeed*5);
+            }
         }
     }
     
@@ -224,9 +237,8 @@ public class ActionManager : MonoBehaviour
             spawner.SpawnBarrier(
                 enemy.GetComponent<EnemyScript>().ReturnSpawnPos(),
                 enemy.GetComponent<EnemyScript>().ReturnWallPos(),
-                type,
-                speed);
+                type, speed);
         }
-        backGround.GetComponent<MoveBackground>().SetSpeed(speed);
+        
     }
 }

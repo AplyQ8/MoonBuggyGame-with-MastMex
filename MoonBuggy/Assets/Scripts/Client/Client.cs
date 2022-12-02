@@ -87,7 +87,6 @@ public class Client : MonoBehaviour
     public void Send_Jump(Int32 unixTime)
     {
         sender.Send_Jump(unixTime);
-        reciever.Accept_Jump();
     }
 
     public void Request_For_Player_List(int? id)
@@ -175,7 +174,7 @@ public class Client : MonoBehaviour
 
     public void ReceiveErrorMessage(string message)
     {
-        activeManager.GetComponent<GameManagerScript>().AddMessageToErrorLog(message);
+        //activeManager.GetComponent<GameManagerScript>().AddMessageToErrorLog(message);
     }
 
     public void ReceiveReadyPlayers(string[] arguments)

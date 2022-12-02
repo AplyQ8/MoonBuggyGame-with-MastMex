@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Recieve : MonoBehaviour
 {
@@ -33,22 +34,30 @@ public class Recieve : MonoBehaviour
         while (true)
         {
             byte[] bytes = new byte[1024];
-            int bytesRec = socket.Receive(bytes);
-            String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
-            String[] commands = res.Split("\r\n\r\n");
-            for (int i = 0; i < commands.Length - 1; i++)
+            int bytesRec;
+            try
             {
-                String[] param = commands[i].Split(" ");
-                switch ((Status)Enum.Parse(typeof(Status), param[0]))
-                {
-                    case Status.OK:
-                        SwitchFunc(param);
-                        break;
-                    case Status.ERROR:
-                        _threadManager.ExecuteOnMainThread(()=> {ReceiveErrorMessage(param);});
-                        break;
-                }
+                 bytesRec = socket.Receive(bytes);
+                 String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
+                 String[] commands = res.Split("\r\n\r\n");
+                 for (int i = 0; i < commands.Length - 1; i++)
+                 {
+                     String[] param = commands[i].Split(" ");
+                     switch ((Status)Enum.Parse(typeof(Status), param[0]))
+                     {
+                         case Status.OK:
+                             SwitchFunc(param);
+                             break;
+                         case Status.ERROR:
+                             _threadManager.ExecuteOnMainThread(()=> {ReceiveErrorMessage(param);});
+                             break;
+                     }
                
+                 }
+            }
+            catch (SocketException sEx)
+            {
+                //_threadManager.ExecuteOnMainThread(()=> LostConnection(socket, sEx));
             }
         }
     }
@@ -102,6 +111,13 @@ public class Recieve : MonoBehaviour
                 _threadManager.ExecuteOnMainThread(() => { ReceivePlayerSpawnEvent(arguments);});
                 break;
         }
+    }
+
+    private void LostConnection(Socket _socket, SocketException sEx)
+    {
+        SceneManager.LoadScene(0);
+        Debug.Log($"We've lost connection with the server..{sEx}");
+        _socket.Close();
     }
 
     private void Player_Add_Event(string id)
@@ -199,12 +215,12 @@ public class Recieve : MonoBehaviour
 
     private void ReceivePlayerSpawnEvent(string[] arguments)
     {
-        string mes = "";
-        for (int i = 0; i < arguments.Length; i++)
-        {
-            mes += arguments[i] + " ";
-        }
-        Debug.Log(mes);
+        // string mes = "";
+        // for (int i = 0; i < arguments.Length; i++)
+        // {
+        //     mes += arguments[i] + " ";
+        // }
+        // Debug.Log(mes);
         client.ReceivePlayerSpawnEvent(arguments);
     }
 }
