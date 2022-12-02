@@ -90,12 +90,12 @@ public class ActionManager : MonoBehaviour
         waitingForOthers.enabled = true;
     }
 
-    public void StartGame(double unixTime)
+    public void StartGame(int secondsLeft)
     {
         startBtn.SetActive(false);
         readyBtn.SetActive(false);
         backCount.SetActive(true);
-        StartCoroutine(BackCount(SecondsLeft(unixTime)));
+        StartCoroutine(BackCount(secondsLeft));
         //BackCountWithThread(SecondsLeft(unixTime));
         
     }
@@ -200,12 +200,13 @@ public class ActionManager : MonoBehaviour
 
     public void ReceivePlayerSpawnEvent(string[] arguments)
     {
-        for (int i = 2; i < arguments.Length-1; i += 2)
+        for (int i = 2; i < arguments.Length-1; i += 3)
         {
-            DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-            dateTime = dateTime.AddSeconds( Convert.ToDouble(arguments[i + 1]) ).ToLocalTime();
-            //Debug.Log($"Received message to spawn {arguments[i]} at {dateTime}");
-            var seconds = SecondsLeft(Convert.ToDouble(arguments[i + 1]));
+            // DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+            // dateTime = dateTime.AddSeconds( Convert.ToDouble(arguments[i + 1]) ).ToLocalTime();
+            // //Debug.Log($"Received message to spawn {arguments[i]} at {dateTime}");
+            // var seconds = SecondsLeft(Convert.ToDouble(arguments[i + 1]));
+            int seconds = Convert.ToInt32(Convert.ToDouble(arguments[i + 1]) - Convert.ToDouble(arguments[i + 2]));
             var spawnPos = _currentSpeed * seconds;
             spawner.SpawnBarrier(
                 new Vector3(_playerPos.x + spawnPos, _playerPos.y - 0.4f, 0),

@@ -134,9 +134,9 @@ public class Client : MonoBehaviour
         activeManager.GetComponent<ActionManager>().Accept_Readiness();
     }
 
-    public void StartGame(double unixTime)
+    public void StartGame(int secondsLeft)
     {
-        activeManager.GetComponent<ActionManager>().StartGame(unixTime);
+        activeManager.GetComponent<ActionManager>().StartGame(secondsLeft);
     }
     
     public void Accept_Players(string[] param)
