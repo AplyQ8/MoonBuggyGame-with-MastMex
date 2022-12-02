@@ -13,9 +13,19 @@ public class EnemyScript : MonoBehaviour
     private string _id;
     private bool _status;
 
+
+    private void Awake()
+    {
+        gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(667.16f, 129.92f);
+    }
     public void SetID(string id)
     {
         _id = id;
+    }
+
+    public void SetPos(Vector3 pos)
+    {
+        gameObject.transform.position += pos;
     }
 
     public bool CheckID(string id) => _id == id;

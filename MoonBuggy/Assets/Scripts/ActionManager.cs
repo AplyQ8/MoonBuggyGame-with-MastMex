@@ -32,6 +32,7 @@ public class ActionManager : MonoBehaviour
     private TMP_Text backCountText;
     private float _currentSpeed = 5f;
     private Vector3 _playerPos;
+    private float _positionOffset = 0f;
     
     
     private void Awake()
@@ -154,8 +155,11 @@ public class ActionManager : MonoBehaviour
         GameObject enemy = Instantiate(enemyPref, new Vector3(0, 0, 0), Quaternion.identity);
         enemy.transform.SetParent(enemyField.transform);
         enemy.transform.localScale = new Vector3(1, 1, 1);
+        _positionOffset += 2f;
         enemy.GetComponent<EnemyScript>().SetID(id);
+        enemy.GetComponent<EnemyScript>().SetPos(new Vector3(transform.position.x + _positionOffset, transform.position.y, 0));
         enemies.Add(enemy);
+        
     }
 
     public void Player_Ready_Event(string id)
@@ -175,10 +179,12 @@ public class ActionManager : MonoBehaviour
             {
                 Destroy(enemies[i]);
                 enemies.Remove(enemies[i]);
+                _positionOffset -= 2f;
                 break;
 
             }
         }
+        
     }
     public void IncreaseSpeed(float acceleration)
     {
