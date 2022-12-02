@@ -207,8 +207,9 @@ public class ActionManager : MonoBehaviour
                     new Vector3(enemyScript.ReturnEnemyXPos()+spawnPos, enemyScript.ReturnEnemyYPos() - 0.4f, 0),
                     enemy.GetComponent<EnemyScript>().ReturnWallPos(),
                     arguments[i],
-                    _currentSpeed*5);
+                    _currentSpeed);
             }
+            backGround.GetComponent<MoveBackground>().SetSpeed(_currentSpeed);
         }
     }
     
