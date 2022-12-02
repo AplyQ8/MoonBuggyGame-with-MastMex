@@ -27,6 +27,7 @@ public class ActionManager : MonoBehaviour
     [SerializeField] private Spawner spawner;
     [SerializeField] private GameObject playerSpawnPos;
     [SerializeField] private GameObject startGameBTN;
+    [SerializeField] private GameObject timer;
     [SerializeField] private int? lobbyID;
     private List<GameObject> enemies = new List<GameObject>();
     private TMP_Text backCountText;
@@ -49,6 +50,7 @@ public class ActionManager : MonoBehaviour
         backGround.GetComponent<MoveBackground>().enabled = false;
         player.GetComponent<BuggyScript>().enabled = false;
         _playerPos = player.transform.position;
+        timer.SetActive(false);
     }
 //-------------Send Requests-------------------------
     public void SendRequest_for_Leaving_Lobby()
@@ -114,10 +116,12 @@ public class ActionManager : MonoBehaviour
         backCount.SetActive(false);
         backGround.GetComponent<MoveBackground>().enabled = true;
         startGameBTN.SetActive(false);
+        timer.SetActive(true);
         
     }
     public void LostTheGame()
     {
+        timer.GetComponent<TimerScript>().ReceiveDeath();
         player.GetComponent<BuggyScript>().enabled = false;
         lostMessage.enabled = true;
     }
@@ -216,6 +220,33 @@ public class ActionManager : MonoBehaviour
                     _currentSpeed);
             }
             backGround.GetComponent<MoveBackground>().SetSpeed(_currentSpeed);
+        }
+    }
+
+    public void PlayerEventsOnGame(string eventType, string id)
+    {
+        switch (eventType)
+        {
+            case "Death":
+                for (int i = 0; i < enemies.Count; i++)
+                {
+                    if (enemies[i].GetComponent<EnemyScript>().CheckID(id))
+                    {
+                        Destroy(enemies[i]);
+                        enemies.Remove(enemies[i]);
+                        break;
+                    }
+                }
+                break;
+            case "Jump":
+                foreach (var enemy in enemies)
+                {
+                    if (enemy.GetComponent<EnemyScript>().CheckID(id))
+                    {
+                        enemy.GetComponent<EnemyScript>().Jump();
+                    }
+                }
+                break;
         }
     }
     

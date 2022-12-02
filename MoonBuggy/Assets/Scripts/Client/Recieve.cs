@@ -13,6 +13,7 @@ public class Recieve : MonoBehaviour
     [SerializeField] private Client client;
     [SerializeField] private static Threadmanager _threadManager;
     private static Thread testThread = null;
+    private bool _isListen = true;
 
     private void Awake()
     {
@@ -31,7 +32,7 @@ public class Recieve : MonoBehaviour
 
     private void ThreadAction()
     {
-        while (true)
+        while (_isListen)
         {
             byte[] bytes = new byte[1024];
             int bytesRec;
@@ -57,7 +58,8 @@ public class Recieve : MonoBehaviour
             }
             catch (SocketException sEx)
             {
-                //_threadManager.ExecuteOnMainThread(()=> LostConnection(socket, sEx));
+                _isListen = false;
+                _threadManager.ExecuteOnMainThread(()=> LostConnection(testThread, socket));
             }
         }
     }
@@ -110,14 +112,27 @@ public class Recieve : MonoBehaviour
             case "/map_event":
                 _threadManager.ExecuteOnMainThread(() => { ReceivePlayerSpawnEvent(arguments);});
                 break;
+            case "/event_up_speed":
+                _threadManager.ExecuteOnMainThread(() => {EventSpeedUp(Convert.ToSingle(arguments[2]));});
+                break;
+            case "/event_jump_player":
+                _threadManager.ExecuteOnMainThread(()=> EventJumpPlayer(arguments[2]));
+                break;
+            case "/event_death_player":
+                _threadManager.ExecuteOnMainThread(()=> EventDeathPlayer(arguments[2]));
+                break;
+            case "/Death":
+                _threadManager.ExecuteOnMainThread(ReceiveDeath);
+                break;
         }
     }
 
-    private void LostConnection(Socket _socket, SocketException sEx)
+    private void LostConnection(Thread thread, Socket _socket)
     {
-        SceneManager.LoadScene(0);
-        Debug.Log($"We've lost connection with the server..{sEx}");
+        thread.Abort();
         _socket.Close();
+        SceneManager.LoadScene(0);
+        
     }
 
     private void Player_Add_Event(string id)
@@ -174,25 +189,7 @@ public class Recieve : MonoBehaviour
         }
         client.ReceiveErrorMessage(errorMessage);
     }
-
-    public void Accept_Jump()
-    {
-        byte[] bytes = new byte[1024];
-        int bytesRec = socket.Receive(bytes);
-        String res = Encoding.UTF8.GetString(bytes, 0, bytesRec);
-        String[] commands = res.Split("\r\n\r\n");
-        String[] param = commands[0].Split(" ");
-        switch ((Status)Enum.Parse(typeof(Status), param[0]))
-        {
-            case Status.OK:
-                client.Accept_Jump();
-                break;
-            case Status.DEATH:
-                client.LostTheGame();
-                break;
-        }
-    }
-
+    
     private void Receive_Player_ID(string id)
     {
         client.SetID(id);
@@ -222,5 +219,25 @@ public class Recieve : MonoBehaviour
         // }
         // Debug.Log(mes);
         client.ReceivePlayerSpawnEvent(arguments);
+    }
+
+    private void EventSpeedUp(float speed)
+    {
+        client.EventSpeedUp(speed);
+    }
+
+    private void EventJumpPlayer(string id)
+    {
+        client.EventJumpPlayer(id);
+    }
+
+    private void EventDeathPlayer(string id)
+    {
+        client.EventDeathPlayer(id);
+    }
+
+    private void ReceiveDeath()
+    {
+        client.LostTheGame();
     }
 }

@@ -141,12 +141,6 @@ public class Client : MonoBehaviour
     {
         activeManager.GetComponent<ActionManager>().Accept_player_List(param, _id);
     }
-
-    public void Accept_Jump()
-    {
-        
-    }
-
     public void LostTheGame()
     {
         activeManager.GetComponent<ActionManager>().LostTheGame();
@@ -184,6 +178,21 @@ public class Client : MonoBehaviour
     public void ReceivePlayerSpawnEvent(string[] arguments)
     {
         activeManager.GetComponent<ActionManager>().ReceivePlayerSpawnEvent(arguments);
+    }
+
+    public void EventSpeedUp(float acceleration)
+    {
+        activeManager.GetComponent<ActionManager>().IncreaseSpeed(acceleration);
+    }
+
+    public void EventJumpPlayer(string id)
+    {
+        activeManager.GetComponent<ActionManager>().PlayerEventsOnGame("Jump", id);
+    }
+
+    public void EventDeathPlayer(string id)
+    {
+        activeManager.GetComponent<ActionManager>().PlayerEventsOnGame("Death", id);
     }
     //----------------------------------------------
 }

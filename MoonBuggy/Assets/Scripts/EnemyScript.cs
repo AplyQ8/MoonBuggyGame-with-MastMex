@@ -56,5 +56,10 @@ public class EnemyScript : MonoBehaviour
         return gameObject.transform.position.y;
     }
 
+    public void Jump()
+    {
+        buggy.GetComponent<EnemyBuggyScript>().Jump();
+    }
+
 
 }
