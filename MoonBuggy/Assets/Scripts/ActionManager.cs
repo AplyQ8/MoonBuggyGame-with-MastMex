@@ -222,7 +222,7 @@ public class ActionManager : MonoBehaviour
                     arguments[i],
                     _currentSpeed);
             }
-            backGround.GetComponent<MoveBackground>().SetSpeed(_currentSpeed);
+            
         }
     }
 

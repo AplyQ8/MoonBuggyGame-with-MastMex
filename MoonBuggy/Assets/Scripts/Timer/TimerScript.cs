@@ -8,7 +8,6 @@ public class TimerScript : MonoBehaviour
     [SerializeField] private TMP_Text text;
     [SerializeField] private int minutes;
     [SerializeField] private int seconds;
-    [SerializeField] private int milliseconds;
     [SerializeField] private bool isAlive = true;
 
 
@@ -16,7 +15,6 @@ public class TimerScript : MonoBehaviour
     {
         minutes = 0;
         seconds = 0;
-        milliseconds = 0;
         StartCoroutine(TimeFlow());
     }
 
@@ -24,21 +22,14 @@ public class TimerScript : MonoBehaviour
     {
         while (isAlive)
         {
-            if (milliseconds == 99)
-            {
-                seconds++;
-                milliseconds = -1;
-            }
-
             if (seconds == 59)
             {
                 minutes++;
-                seconds = 0;
-                milliseconds = -1;
+                seconds = -1;
             }
-            milliseconds += 1;
-            text.text = $"{minutes}:{seconds}:{milliseconds}";
-            yield return new WaitForSeconds(0.01f);
+            seconds += 1;
+            text.text = $"{minutes}:{seconds}";
+            yield return new WaitForSeconds(1f);
         }
     }
 
@@ -46,5 +37,7 @@ public class TimerScript : MonoBehaviour
     {
         isAlive = false;
         StopCoroutine(TimeFlow());
+        text.text = $"Living time: {minutes}:{seconds}";
+
     }
 }
